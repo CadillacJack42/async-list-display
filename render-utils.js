@@ -25,3 +25,10 @@ export const renderDogs = (dogs) => {
     }
     return dogKennel;
 };
+
+export const renderCannabis = (strain) => {
+    const straincontainer = document.createElement('div');
+    straincontainer.classList.add('cannabis-item');
+
+    
+};

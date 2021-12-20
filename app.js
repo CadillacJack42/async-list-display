@@ -1,4 +1,4 @@
-import { getDogs } from './fetch-utils.js';
+import { getDogs, getCannabis } from './fetch-utils.js';
 import { renderDogs } from './render-utils.js';
 
 // import functions and grab DOM elements
@@ -15,9 +15,9 @@ window.addEventListener('load', async() => {
 });
 
 
-// let state
+window.addEventListener('load', async() => {
+    const strains = await getCannabis();
+    console.log(strains);
+});
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
