@@ -70,3 +70,36 @@ export const renderArtists = (artist) => {
 
     return artistContainer;
 };
+
+export const renderBeatles = (beatle) => {
+    const beatleContainer = document.createElement('div');
+    beatleContainer.classList.add('beatle-item');
+
+    const beatleName = document.createElement('span');
+    beatleName.textContent = beatle.name;
+
+    const beatleInstrument = document.createElement('span');
+    beatleInstrument.textContent = beatle.instrument;
+
+    const beatleLife = document.createElement('span');
+    beatleLife.textContent = beatle.life;
+
+    const beatleAlive = document.createElement('span');
+    beatleAlive.textContent = isAlive(beatleAlive);
+
+    const description = document.createElement('p');
+
+    description.textContent = `${beatleName} (${beatleLife}) played the ${beatleInstrument}. ${beatleName}${beatleAlive}`;
+
+    beatleContainer.append(description);
+
+    return beatleContainer;
+};
+
+const isAlive = (alive) => {
+    if (alive) {
+        return ' is alive.';
+    } else {
+        return ' is not alive.';
+    }
+};
