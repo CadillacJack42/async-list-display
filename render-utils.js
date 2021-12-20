@@ -47,3 +47,25 @@ export const renderCannabis = (strain) => {
 
     return straincontainer;
 };
+
+export const renderArtists = (artist) => {
+    const artistContainer = document.createElement('div');
+    artistContainer.classList.add('artist-item');
+
+    const artistNameEl = document.createElement('p');
+    artistNameEl.classList.add('artist');
+
+    const descriptionEl = document.createElement('p');
+
+    artistNameEl.textContent = artist.name;
+
+    descriptionEl.textContent = `
+    ${artist.name} was from ${artist.origin_country}.
+    They lived from ${artist.life}.
+    ${artist.name} was a part of the ${artist.style} movement.
+    `;
+
+    artistContainer.append(artistNameEl, descriptionEl);
+
+    return artistContainer;
+};
