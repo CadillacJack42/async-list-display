@@ -26,3 +26,11 @@ export const getArtists = async() => {
 
     return res.data;
 };
+
+export const getBeatles = async() => {
+    const res = await client 
+        .from('beatles')
+        .select();
+
+    return res.data;
+};

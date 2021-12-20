@@ -70,3 +70,26 @@ export const renderArtists = (artist) => {
 
     return artistContainer;
 };
+
+export const renderBeatles = (beatle) => {
+    const beatleContainer = document.createElement('div');
+    beatleContainer.classList.add('beatle-item');
+
+    const beatleAlive = isAlive(beatle.alive);
+    
+    const description = document.createElement('p');
+
+    description.textContent = `${beatle.name} (${beatle.life}) played the ${beatle.instrument}. ${beatle.name}${beatleAlive}`;
+
+    beatleContainer.append(description);
+
+    return beatleContainer;
+};
+
+const isAlive = (alive) => {
+    if (alive) {
+        return ' is alive.';
+    } else {
+        return ' is not alive.';
+    }
+};
