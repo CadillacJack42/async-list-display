@@ -54,8 +54,9 @@ export const renderArtists = (artist) => {
 
     const artistNameEl = document.createElement('p');
     artistNameEl.classList.add('artist');
-
+    
     const descriptionEl = document.createElement('p');
+    descriptionEl.classList.add('artist');
 
     artistNameEl.textContent = artist.name;
 
