@@ -3,11 +3,15 @@ export const renderDogs = (dogs) => {
     for (const dog of dogs) {
         const dogContainerEl = document.createElement('div');
         dogContainerEl.classList.add('dog-item');
+
         const dogNameEl = document.createElement('p');
         dogNameEl.classList.add('dog-p');
+
         const dogAgeEl = document.createElement('span');
+
         const dogBreedEl = document.createElement('p');
         dogBreedEl.classList.add('dog-p');
+
         const isGoodDogEl = document.createElement('p');
         isGoodDogEl.classList.add('dog-p');
 
@@ -19,9 +23,6 @@ export const renderDogs = (dogs) => {
         dogContainerEl.append(dogNameEl, dogAgeEl, dogBreedEl, isGoodDogEl);
 
         dogKennel.append(dogContainerEl);
-        console.log(dogKennel);
-
-        
     }
     return dogKennel;
 };
@@ -30,5 +31,15 @@ export const renderCannabis = (strain) => {
     const straincontainer = document.createElement('div');
     straincontainer.classList.add('cannabis-item');
 
-    
+    const strainNameEl = document.createElement('p');
+
+    const growerEl = document.createElement('p');
+
+    const description = `${strain.name} has ${strain.thc}% THC and ${strain.cbd}% CBD.`;
+    strainNameEl.textContent = description;
+
+    const grownBy = `${strain.name} was grown by ${strain.grower}.`;
+    growerEl.textContent = grownBy;
+
+    straincontainer.append(growerEl, strainNameEl);
 };
