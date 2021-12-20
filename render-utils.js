@@ -75,21 +75,11 @@ export const renderBeatles = (beatle) => {
     const beatleContainer = document.createElement('div');
     beatleContainer.classList.add('beatle-item');
 
-    const beatleName = document.createElement('span');
-    beatleName.textContent = beatle.name;
-
-    const beatleInstrument = document.createElement('span');
-    beatleInstrument.textContent = beatle.instrument;
-
-    const beatleLife = document.createElement('span');
-    beatleLife.textContent = beatle.life;
-
-    const beatleAlive = document.createElement('span');
-    beatleAlive.textContent = isAlive(beatleAlive);
-
+    const beatleAlive = isAlive(beatle.alive);
+    
     const description = document.createElement('p');
 
-    description.textContent = `${beatleName} (${beatleLife}) played the ${beatleInstrument}. ${beatleName}${beatleAlive}`;
+    description.textContent = `${beatle.name} (${beatle.life}) played the ${beatle.instrument}. ${beatle.name}${beatleAlive}`;
 
     beatleContainer.append(description);
 
