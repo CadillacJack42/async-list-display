@@ -108,4 +108,15 @@ footer {
     color: aliceblue;
 }
 
+.artist-item {
+    margin: 20px 0px;
+    background-color: rgb(8, 63, 111);
+    text-align: center;
+}
+
+.artist {
+    margin: 0;
+    color: beige;
+}
+
 

@@ -18,3 +18,11 @@ export const getCannabis = async() => {
 
     return res.data;
 };
+
+export const getArtists = async() => {
+    const res = await client 
+        .from('artists')
+        .select();
+
+    return res.data;
+};
