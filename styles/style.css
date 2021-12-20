@@ -78,7 +78,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -89,3 +89,12 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.dog-p {
+    margin: 0%;
+}
+.dog-container {
+    margin-top: 10px;
+};
+
+
