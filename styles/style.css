@@ -96,6 +96,16 @@ footer {
 .dog-item {
     margin-top: 10px;
     background-color: rgb(184, 220, 250)
-};
+}
+
+.cannabis-item {
+    margin: 20px 0px;
+    background-color: rgb(63, 125, 179);
+}
+
+.strain {
+    margin: 0;
+    color: aliceblue;
+}
 
 

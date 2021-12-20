@@ -10,3 +10,11 @@ export const getDogs = async() => {
 
     return res.data;
 };
+
+export const getCannabis = async() => {
+    const res = await client 
+        .from('cannabis')
+        .select();
+
+    return res.data;
+};
