@@ -9,7 +9,9 @@ const firstListEl = document.getElementById('first-list');
 
 const dogList = async() => {
     const list = await dogs();
+    console.log(list);
     const renderedList = renderDogs(list);
+    console.log(renderedList);
     firstListEl.append(renderedList);
 };
 dogList();
