@@ -3,7 +3,7 @@ const SUPABASE_URL = 'https://cmewyjgphfnmytfmmpjy.supabase.co';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-export const dogs = async() => {
+export const getDogs = async() => {
     const res = await client
         .from('dogs')
         .select();

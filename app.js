@@ -1,4 +1,4 @@
-import { dogs } from './fetch-utils.js';
+import { getDogs } from './fetch-utils.js';
 import { renderDogs } from './render-utils.js';
 
 // import functions and grab DOM elements
@@ -7,14 +7,12 @@ import { renderDogs } from './render-utils.js';
 
 const firstListEl = document.getElementById('first-list');
 
-const dogList = async() => {
-    const list = await dogs();
-    console.log(list);
-    const renderedList = renderDogs(list);
-    console.log(renderedList);
-    firstListEl.append(renderedList);
-};
-dogList();
+
+window.addEventListener('load', async() => {
+    const allDogs = await getDogs();
+    const renderedDogs = renderDogs(allDogs);
+    firstListEl.append(renderedDogs);
+});
 
 
 // let state
