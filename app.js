@@ -21,7 +21,6 @@ window.addEventListener('load', async() => {
     
     for (const strain of strains) {
         const newStrain = renderCannabis(strain);
-        console.log(newStrain);
         secondListEl.append(newStrain);
     }
 });

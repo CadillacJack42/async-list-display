@@ -32,8 +32,10 @@ export const renderCannabis = (strain) => {
     straincontainer.classList.add('cannabis-item');
 
     const strainNameEl = document.createElement('p');
-
+    strainNameEl.classList.add('strain');
+    
     const growerEl = document.createElement('p');
+    growerEl.classList.add('strain');
 
     const description = `${strain.strain} has ${strain.thc}% THC and ${strain.cbd}% CBD.`;
     strainNameEl.textContent = description;
