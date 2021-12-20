@@ -35,11 +35,13 @@ export const renderCannabis = (strain) => {
 
     const growerEl = document.createElement('p');
 
-    const description = `${strain.name} has ${strain.thc}% THC and ${strain.cbd}% CBD.`;
+    const description = `${strain.strain} has ${strain.thc}% THC and ${strain.cbd}% CBD.`;
     strainNameEl.textContent = description;
 
-    const grownBy = `${strain.name} was grown by ${strain.grower}.`;
+    const grownBy = `${strain.strain} was grown by ${strain.grower}.`;
     growerEl.textContent = grownBy;
 
     straincontainer.append(growerEl, strainNameEl);
+
+    return straincontainer;
 };

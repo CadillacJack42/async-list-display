@@ -1,11 +1,12 @@
 import { getDogs, getCannabis } from './fetch-utils.js';
-import { renderDogs } from './render-utils.js';
+import { renderDogs, renderCannabis } from './render-utils.js';
 
 // import functions and grab DOM elements
 
 
 
 const firstListEl = document.getElementById('first-list');
+const secondListEl = document.getElementById('second-list');
 
 
 window.addEventListener('load', async() => {
@@ -17,7 +18,12 @@ window.addEventListener('load', async() => {
 
 window.addEventListener('load', async() => {
     const strains = await getCannabis();
-    console.log(strains);
+    
+    for (const strain of strains) {
+        const newStrain = renderCannabis(strain);
+        console.log(newStrain);
+        secondListEl.append(newStrain);
+    }
 });
 
 
