@@ -2,3 +2,11 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsI
 const SUPABASE_URL = 'https://cmewyjgphfnmytfmmpjy.supabase.co';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+export const dogs = async() => {
+    const res = await client
+        .from('dogs')
+        .select();
+
+    return res.data;
+};

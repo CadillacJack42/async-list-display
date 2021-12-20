@@ -1,7 +1,20 @@
+import { dogs } from './fetch-utils.js';
+import { renderDogs } from './render-utils.js';
+
 // import functions and grab DOM elements
 
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MDAxOTY4MywiZXhwIjoxOTU1NTk1NjgzfQ.0WT-gqj-qvV0wYfg0QdblxbkS4J4rIq0wf8BI3R45yc';
-const SUPABASE_URL = 'https://cmewyjgphfnmytfmmpjy.supabase.co';
+
+
+const firstListEl = document.getElementById('first-list');
+
+const dogList = async() => {
+    const list = await dogs();
+    const renderedList = renderDogs(list);
+    firstListEl.append(renderedList);
+};
+dogList();
+
+
 // let state
 
 // set event listeners 
